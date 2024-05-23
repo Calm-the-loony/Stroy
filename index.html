@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHITECTORVISION</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+</head>
+<body  onscroll="scrollHandler(event)">
+
+<header class="header" id="header">
+    <div id="parallelogram">
+      <img src="image/6139080-200.svg" alt="Логотип" class="logo-image">
+      <span class="a">ARCHITECTORVISION</span>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> 
+    <div class="action-container"> 
+      <div class="search-bar">
+        <input type="text" id="text-to-find" value="">
+        <button onclick="FindOnPage('text-to-find')">Поиск</button>
+    </div>
+    
+        <div class="user-actions">
+          <button id="favorite-button">
+              <img src="image/free-icon-call-center-agent-2706851(1).png" alt="Звонок">
+          </button>
+          <button id="scooter-button"><img src="image/free-icon-new-email-1060421.png" alt="почта"></button>
+          <button id="cart-button">
+            <img src="image/free-icon-russia-13442376.png" alt="язык">
+        </button>
+      </div>
+    </div>
+    <div class="submenu">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Деятельность</a></li>
+            <li><a href="#">Наши объекты</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+</header>
+
+<section class="parts-search">
+    <div class="background-image">
+        <div class="content">
+            <h2>Мы помогаем <span class="highlight">строить</span> будущее!</h2>
+        </div>
+    </div>
+</section>
+
+<div class="categories-section">
+    <div class="category">
+        <div class="category-container">
+            <img src="image/free-icon-battery-1044931.png" alt="Icon 1">
+            <p>Batteries</p>
+        </div>
+    </div>
+    <div class="category">
+        <div class="category-container">
+            <img src="image/free-icon-battery-1044931.png" alt="Icon 2">
+            <p>Batteries</p>
+        </div>
+    </div>
+    <div class="category">
+        <div class="category-container">
+            <img src="image/free-icon-battery-1044931.png" alt="Icon 3">
+            <p>Batteries</p>
+        </div>
+    </div>
+    <div class="category">
+        <div class="category-container">
+            <img src="image/free-icon-battery-1044931.png" alt="Icon 4">
+            <p>Batteries</p>
+        </div>
+    </div>
+    <div class="category">
+        <div class="category-container">
+            <img src="image/free-icon-battery-1044931.png" alt="Icon 5">
+            <p>Batteries</p>
+        </div>
+    </div>
+    <div class="category">
+        <div class="category-container">
+            <img src="image/free-icon-battery-1044931.png" alt="Icon 6">
+            <p>Batteries</p>
+        </div>
+    </div>
+    <div class="category">
+        <div class="category-container">
+            <img src="image/free-icon-battery-1044931.png" alt="Icon 7">
+            <p>Batteries</p>
+        </div>
+    </div>
+    <div class="category">
+        <div class="category-container">
+            <img src="image/free-icon-battery-1044931.png" alt="Icon 8">
+            <p>Batteries</p>
+        </div>
+    </div>
+</div>
+
+<section class="featured-products" >
+    <h2 class="a">Featured Products</h2>
+    <div class="red-line"></div>
+    <div class="carousel">
+      <div class="product-card" data-id="1">
+        <div class="discount">12% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$99.00</span>
+            <span class="original-price">$113.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+        </button>  
+        </div>
+      </div>
+      <div class="product-card" data-id="2">
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="original-prices">$258.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+        </button>  
+        </div>
+      </div>
+      <div class="product-card" data-id="3">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="4">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="5">
+        <div class="discount">19% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$20.99</span>
+            <span class="original-price">$25.99</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="6">
+        <div class="discount">19% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$20.99</span>
+            <span class="original-price">$25.99</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="7">
+        <div class="discount">19% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$20.99</span>
+            <span class="original-price">$25.99</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="8">
+        <div class="discount">19% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+            <p class="category">Cold Start Valves</p>
+            <p class="name">Pure Power Remanufactured</p>
+            <div class="price">
+                <span class="discounted-price">$20.99</span>
+                <span class="original-price">$25.99</span>
+                <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+            <button class="add-to-favorites" onclick="toggleFavorite(this)">
+                <i class="fas fa-heart"></i>
+            </button>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  
+
+    <section class="banner-container">
+      <div class="contact-banner">
+      <div class="banner-item">
+        <a href="https://www.ozon.ru/seller/scooter24-462340/products/?miniapp=seller_462340">
+          <img src="image/шапка-мп-14.png" alt="Banner 1">
+          <div class="banner-text">
+            <p class="banner-title">Оформить заказ</p>
+            <p>на площадке Ozon</p>
+            <p class="banner-description">Жми</p>
+            <img src="image/free-icon-arrow-right-8213402.png" alt="Arrow">
+          </div>
+        </a>
+      </div>
+      <div class="banner-item">
+        <a href=" https://market.yandex.ru/business--scooter-24/35256421">
+          <img src="image/шапка-мп-13.png" alt="Banner 2">
+          <div class="banner-text">
+            <p class="banner-title">Оформить заказ</p>
+            <p>на площадке Я.Маркет</p>
+            <p class="banner-description">Жми</p>
+            <img src="image/free-icon-arrow-right-8213402.png" alt="Arrow">
+          </div>
+        </a>
+      </div>
+    </div>
+    </section>
+  
+  
+  
+
+  <section class="guarantees">
+    <div class="guarantee-item">
+      <img src="image/free-icon-smiley-142310.png" alt="Надежность">
+      <div class="guarantee-text">
+      <h3>100% Надежность</h3>
+      <p>Более 1000 отзывов</p>
+      </div>
+    </div>
+    <div class="guarantee-item">
+      <img src="image/free-icon-thumb-up-like-13578170.png" alt="Скидка">
+      <div class="guarantee-text">
+      <h3>Скидка 10% при</h3>
+      <p>оплате СБП от Сбера</p>
+      </div>
+    </div>
+    <div class="guarantee-item">
+      <img src="image/free-icon-airplane-31069.png" alt="Быстрая доставка">
+      <div class="guarantee-text">
+      <h3>Быстрая доставка </h3>
+      <p>по всей России</p>
+      </div>
+    </div>
+    <div class="guarantee-item">
+      <img src="image/free-icon-dollar-symbol-126179.png" alt="Возврат">
+      <div class="guarantee-text">
+      <h3>14 дней на возврат</h3>
+      <p>независимо от причин</p>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section class="featured-products">
+    <h2 class="a">Featured Products</h2>
+    <div class="red-line"></div>
+    <button class="view-more" onclick="showMore()">View more</button>
+    <!-- Первый ряд карточек -->
+    <div class="card-row">
+      <div class="product-card" data-id="9">
+        <div class="discount">12% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$99.00</span>
+            <span class="original-price">$113.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="10">
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="original-prices">$258.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+      </div>
+      <div class="product-card" data-id="11">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="12">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+    </div>
+  
+    
+    <!-- Второй ряд карточек -->
+    <div class="card-row">
+      <div class="product-card" data-id="13">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="14">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="15">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="16">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card-row">
+      <div class="product-card" data-id="17">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="18">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="19">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="20">
+        <div class="discount">24% off</div>
+        <img src="image/images.jpeg" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="banner-container">
+    <div class="contact-banner">
+    <div class="banner-item">
+      <a href="tel:+1234567890">
+        <img src="image/шапка-озон-16.png" alt="Banner 3">
+        <div class="banner-text">
+          <p class="banner-title">Позвоните нам</p>
+          <p>И мы поможем подобрать</p>
+          <p>комплект для ремонта</p>
+          <p>для всех клиентов</p>
+        </div>
+      </a>
+    </div>
+    <div class="banner-item">
+      <a href="tel:+1234567890">
+        <img src="image/шапка-озон-17.png" alt="Banner 4">
+        <div class="banner-text">
+          <p class="banner-title">Напишите нам</p>
+          <p>мы подберем вам запчасти</p>
+          <p>и решим ваши проблемы</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  </section>
+  
+  <section class="featured-products">
+    <h2 class="c">Latest Products</h2>
+    <div class="red-lines"></div>
+    <div class="carousel">
+      <div class="product-card" data-id="21">
+        <div class="discount">12% off</div>
+        <img src="image/free-icon-tire-6332041(1).png" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$99.00</span>
+            <span class="original-price">$113.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="22">
+        <img src="image/free-icon-tire-6332041(1).png" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="original-prices">$258.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+      </div>
+      <div class="product-card" data-id="23">
+        <div class="discount">24% off</div>
+        <img src="image/free-icon-tire-6332041(1).png" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$89.00</span>
+            <span class="original-price">$117.00</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="24">
+        <div class="discount">19% off</div>
+        <img src="image/free-icon-tire-6332041(1).png" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$20.99</span>
+            <span class="original-price">$25.99</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="25">
+        <div class="discount">19% off</div>
+        <img src="image/free-icon-tire-6332041(1).png" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$20.99</span>
+            <span class="original-price">$25.99</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="26">
+        <div class="discount">19% off</div>
+        <img src="image/free-icon-tire-6332041(1).png" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$20.99</span>
+            <span class="original-price">$25.99</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="27">
+        <div class="discount">19% off</div>
+        <img src="image/free-icon-tire-6332041(1).png" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$20.99</span>
+            <span class="original-price">$25.99</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+      <div class="product-card" data-id="28">
+        <div class="discount">19% off</div>
+        <img src="image/free-icon-tire-6332041(1).png" alt="Product 1">
+        <div class="details">
+          <p class="category">Cold Start Valves</p>
+          <p class="name">Pure Power Remanufactured</p>
+          <div class="price">
+            <span class="discounted-price">$20.99</span>
+            <span class="original-price">$25.99</span>
+            <button class="add-to-cart" onclick="toggleCart(this)"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <button class="add-to-favorites" onclick="toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="banner-container1">
+      <div class="banner-item">
+      <img src="image/banner5.png" alt="Banner5" class="banner-image" onclick="showModal()">
+      <div class="banner-text">
+        <p class="banner-title">Доставка тюнинга</p>
+        <p>и стайлинга под заказ</p>
+        <p>из Китая</p>
+        <p>Доставка 10 дней!</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <button class="whatsapp-btn" onclick="redirectToWhatsApp()">WhatsApp</button>
+      <button class="telegram-btn" onclick="redirectToTelegram()">Telegram</button>
+      <button class="phone-btn" onclick="makePhoneCall()">Звонок</button>
+    </div>
+  </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-section">
+      <h4 class="yellow-text">NEWSLETTER</h4>
+      <p>Get the latest news, specials, and coupons via <br>email! You can cancel your subscription anytime.</p>
+      <form action="#" class="subscribe-form">
+        <input type="email" placeholder="Your email">
+        <button type="submit" class="subscribe-button">Subscribe</button>
+      </form>  
+      <h4 class="yellow-text">COUPON CODES</h4>
+      <p>Check <span class="highlights">all current coupon codes</span> on the page.</p>
+    </div>
+    <div>
+      <hr class="divider">
+    </div>
+    <div class="footer-section">
+      <h3 class="yellow-text">FAQ</h3>
+      <h4><a href="contact.html">Contact</a></h4> <!-- либо ссылка на стороний источник -->
+      <h4><a href="payment.html">Payment Methods</a></h4>
+      <h4><a href="shipping.html">Shipping & Handling</a></h4>
+      <h4><a href="returns.html">Returns</a></h4>
+      <h4><a href="salesroom.html">Salesroom</a></h4>
+    </div>
+    <div>
+      <hr class="divider">
+    </div>
+    <div class="footer-section">
+      <h3 class="yellow-text">INFO</h3>
+      <h4><a href="legal.html">Legal Notice</a></h4>
+      <h4><a href="dataprotection.html">Data Protection</a></h4>
+      <h4><a href="revocation.html">Revocation Right</a></h4>
+      <h4><a href="jobs.html">Jobs</a></h4>
+      <h4><a href="techtips.html">Tech Tips & Tutorials</a></h4>
+      <h4><a href="brands.html">Brands</a></h4>
+      <h3 class="yellow-text">Social</h3>
+      <div class="social-icons">
+        <a href="https://telegram.example.com" class="social-icon">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://whatsapp.example.com" class="social-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.wildberries.ru/brands/scooters" class="social-icon">
+            <img src="image/круг.png" alt="Image 1" class="social-image">
+        </a>
+        <a href="https://www.ozon.ru/seller/scooter24-462340/products/?miniapp=seller_462340" class="social-icon">
+            <img src="image/круг2.png" alt="Image 2" class="social-image">
+        </a>
+    </div>
+    </div>    
+  </footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

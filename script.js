@@ -57,36 +57,81 @@ function toggleFavorite(button) {
     });
   });
 
+  window.addEventListener('scroll', function() {
+    var progressBar = document.getElementById('progress-bar');
+    var scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrollPercentage = (window.scrollY / scrollTotal) * 100;
+    progressBar.style.width = scrollPercentage + '%';
+  });
 
+
+
+  document.querySelectorAll('.activity-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const description = item.getAttribute('data-description');
+      openModal(description);
+    });
+  });
   
-//кнопка View more
-let isHidden = true; 
-
-function hideCards() {
-  const productCards = document.querySelectorAll('.product-card');
-  for (let i = 16; i < productCards.length; i++) {
-    if (isHidden) {
-      productCards[i].classList.add('hidden');
-    } else {
-      productCards[i].classList.remove('hidden');
+  function openModal(activity) {
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('activity-title');
+    const modalDescription = document.getElementById('activity-description');
+  
+    let title, description;
+  
+    switch (activity) {
+      case 'design':
+        title = 'Проектирование';
+        description = '<p>Проектирование является первоначальным этапом любого строительства. Деятельность по проектированию предприятий, зданий и сооружений в соответствии с государственным стандартом включает в себя разработку проектной документации на строительство, расширение, реконструкцию, капитальный ремонт и техническое перевооружение предприятий, зданий и сооружений жилого, производственного, социального, культурно-бытового, специального и иного назначения и их комплексов, инженерной и транспортной инфраструктур.</p>';
+        break;
+      case 'inspection':
+        title = 'Обследование технических состояний зданий и сооружений';
+        description = '<p>Существует ряд факторов, вызывающих необходимость проведения работ по обследованию и оценке технического состояния зданий и сооружений. Основные из них это:</p><p>- факторы, обусловленные влиянием окружающей природной среды;</p><p>- факторы, обусловленные влиянием социально-экономической среды.</p>';
+        break;
+      case 'engineering':
+        title = 'Инженерные изыскания для строительства';
+        description = '<p>Инженерные изыскания обеспечивают комплексное изучение природных и техногенных условий на территории строительства, составление прогнозов взаимодействия этих объектов с окружающей средой, обоснование их инженерной защиты и безопасных условий жизни населения.</p>';
+        break;
+      case 'environmental-protection':
+        title = 'Охрана окружающей среды';
+        description = '<p>В настоящее время формируется и последовательно реализуется единая государственная политика в области экологии, направленная на охрану окружающей среды и рациональное использование природных ресурсов.</p>';
+        break;
+      case 'geological-justification':
+        title = 'Горно-геологическое обоснование для строительства';
+        description = '<p>Разработка горно-геологического обоснования (ГГО) застройки площадей залегания полезных ископаемых проводится на основании Положения № 64, разработанного Управлением по охране недр и геолого-маркшейдерского контроля Госгортехнадзора РФ.</p>';
+        break;
+      case 'construction':
+        title = 'Промышленное и гражданское строительство';
+        description = '<p>ООО "Ростовгипрошахт" имеет лицензию Государственного комитета Российской Федерации по строительству и жилищно-коммунальному комплексу на осуществление строительства зданий и сооружений I и II уровней ответственности в соответствии с государственным стандартом на территории Российской Федерации.</p>';
+        break;
+      case 'client-representation':
+        title = 'Выполнение функций заказчика-застройщика';
+        description = '<p>ООО "Ростовгипрошахт", выполняя функции заказчика-застройщика, вправе осуществлять нижеследующее: Получение и оформление исходных данных для проектирования объектов строительства (резервирование земельного участка, технико-экономические обоснования, технические условия на присоединение инженерных коммуникаций, строительный паспорт)</p>';
+        break;
+      case 'engineering-consulting':
+        title = 'Инжиниринговый консалтинг';
+        description = '<p>Предложение, разработка, реализация имеющихся инвестиционных проектов; Экспертная оценка технического состояния и стоимостная оценка действующих и приобретаемых предприятий. Консультации по технологическим вопросам;</p>';
+        break;
+      default:
+        title = '';
+        description = '';
+        break;
     }
+  
+    modalTitle.innerHTML = title;
+    modalDescription.innerHTML = description;
+  
+    modal.style.display = 'flex';
   }
-}
-
-function toggleVisibility() {
-  isHidden = !isHidden; // Изменяем состояние флага
-  hideCards(); // функция скрытия/отображения карточек
-}
-
-// Вызываем функцию hideCards() при загрузке страницы, чтобы скрыть лишние карточки
-hideCards();
-
-//кнопка "View more"
-const viewMoreButton = document.querySelector('.view-more');
-
-// обрабовпитчик клика на кнопку "View more"
-viewMoreButton.addEventListener('click', toggleVisibility);
-
+  
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+  
+  
+  
 
 //баннер
 // Отображение модального окна

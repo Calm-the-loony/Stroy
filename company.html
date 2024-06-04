@@ -40,7 +40,7 @@
             <li><a href="index.html">Главная</a></li>
             <li><a href="company.html">О компании</a></li>
             <li><a href="news.html">Новости</a></li>
-            <li><a href="#">Наши объекты</a></li>
+            <li><a href="sobject.html">Наши объекты</a></li>
             <li><a href="contact.html">Контакты</a></li>
         </ul>
     </div>
@@ -122,6 +122,7 @@
             <p>3. Согласование проектной, рабочей документации, защита проектных решений в согласующих в экспертных инстанциях.</p><br>
 
             <p>Оплата сдельная. Трудоустройство по ТК РФ/или по договору ГПХ. Возможны командировки по области и регионам.</p>
+            <button class="apply-button" onclick="openModal()">Откликнуться на вакансию</button>
         </div>
         <div class="card-job">
             <h3>Специалист в области расчета и проектирования бетонных и железобетонных конструкций зданий и сооружений</h3>
@@ -136,6 +137,7 @@
             <p>3. Выполнение расчетов бетонных и железобетонных конструкций по предельным состояниям первой группы и выполнение текстовой и графической частей проектной или рабочей документации раздела "Конструкции железобетонные".</p><br>
            
             <p>Оплата сдельная. Трудоустройство по ТК РФ/или по договору ГПХ. Возможны командировки по области и регионам.</p>
+            <button class="apply-button" onclick="openModal()">Откликнуться на вакансию</button>
         </div>
         <div class="card-job">
             <h3>Инженер-проектировщик (Архитектор)</h3>
@@ -151,6 +153,7 @@
             <p>4. Внесение изменений в архитектурный раздел проектной документации в соответствии с требованиями и рекомендациями заказчика, уполномоченных организации.</p><br>
 
             <p>Оплата сдельная. Трудоустройство по ТК РФ/или по договору ГПХ. Возможны командировки по области и регионам.</p>
+            <button class="apply-button" onclick="openModal()">Откликнуться на вакансию</button>
         </div>
         <div class="card-job">
             <h3>Инженер по авторскому надзору</h3>
@@ -171,6 +174,7 @@
             <p>9. Применение современных информационно-коммуникационных технологий, в том числе специализированного программного обеспечения для решения задач проектирования и проведения расчетов.</p><br>
 
             <p>Оплата сдельная. Трудоустройство по ТК РФ/или по договору ГПХ. Работа в подразделении г. Сочи.</p>
+            <button class="apply-button" onclick="openModal()">Откликнуться на вакансию</button>
         </div>
         <div class="card-job">
             <h3>Начальник комплексного отдела</h3>
@@ -189,62 +193,52 @@
             <p>7. РСоставление и/или обеспечение предоставления руководству сводок о результатах выполнения заданий, отчетности, а также передача их органам государственного надзора и контроля.</p><br>
 
             <p>Оплата сдельная. Трудоустройство по ТК РФ. график 5/2, с 8:00 до 17:00.  Возможны командировки по области и регионам. Офис (гор. Ростов-на-Дону, пр. Театральный 89)</p>
-        </div>
+            <button class="apply-button" onclick="openModal()">Откликнуться на вакансию</button>
+          </div>
     </div>
 </div>
 
+<div id="applyModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Откликнуться на вакансию</h2>
+      <form>
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required>
 
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="resume">Резюме:</label>
+          <textarea id="resume" name="resume" rows="4" required></textarea>
+
+          <button type="submit">Отправить</button>
+      </form>
+  </div>
+</div>
 <footer class="footer">
-    <div class="footer-section">
-      <h4 class="yellow-text">NEWSLETTER</h4>
-      <p>Get the latest news, specials, and coupons via <br>email! You can cancel your subscription anytime.</p>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email">
-        <button type="submit" class="subscribe-button">Subscribe</button>
-      </form>  
-      <h4 class="yellow-text">COUPON CODES</h4>
-      <p>Check <span class="highlights">all current coupon codes</span> on the page.</p>
-    </div>
-    <div>
-      <hr class="divider">
-    </div>
-    <div class="footer-section">
-      <h3 class="yellow-text">FAQ</h3>
-      <h4><a href="contact.html">Contact</a></h4> 
-      <h4><a href="payment.html">Payment Methods</a></h4>
-      <h4><a href="shipping.html">Shipping & Handling</a></h4>
-      <h4><a href="returns.html">Returns</a></h4>
-      <h4><a href="salesroom.html">Salesroom</a></h4>
-    </div>
-    <div>
-      <hr class="divider">
-    </div>
-    <div class="footer-section">
-      <h3 class="yellow-text">INFO</h3>
-      <h4><a href="legal.html">Legal Notice</a></h4>
-      <h4><a href="dataprotection.html">Data Protection</a></h4>
-      <h4><a href="revocation.html">Revocation Right</a></h4>
-      <h4><a href="jobs.html">Jobs</a></h4>
-      <h4><a href="techtips.html">Tech Tips & Tutorials</a></h4>
-      <h4><a href="brands.html">Brands</a></h4>
-      <h3 class="yellow-text">Social</h3>
-      <div class="social-icons">
-        <a href="https://telegram.example.com" class="social-icon">
-            <i class="fab fa-telegram"></i>
-        </a>
-        <a href="https://whatsapp.example.com" class="social-icon">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.wildberries.ru/brands/scooters" class="social-icon">
-            <img src="image/круг.png" alt="Image 1" class="social-image">
-        </a>
-        <a href="https://www.ozon.ru/seller/scooter24-462340/products/?miniapp=seller_462340" class="social-icon">
-            <img src="image/круг2.png" alt="Image 2" class="social-image">
-        </a>
-    </div>
-    </div>    
-  </footer>
+  <div class="footer-section">
+    <h4 class="yellow-text">НОВОСТНАЯ РАССЫЛКА</h4>
+    <p>Получайте последние новости, специальные предложения и купоны <br> по электронной почте! Вы можете отменить подписку в любое время.</p>
+    <form action="#" class="subscribe-form">
+      <input type="email" placeholder="Your email">
+      <button type="submit" class="subscribe-button">Subscribe</button>
+    </form>  
+    <h4 class="yellow-text">КОДЫ КУПОНОВ</h4>
+    <p>Подпишитесь <span class="highlights">на нашу новостную</span> рассылку.</p>
+  </div>
+  <div>
+    <hr class="divider">
+  </div>
+  <div class="footer-section">
+    <h4><a href="index.html">Главная</a></h4> <!-- либо ссылка на стороний источник -->
+    <h4><a href="company.html">О компании</a></h4>
+    <h4><a href="news.html">Новости</a></h4>
+    <h4><a href="sobject.html">Наши объекты</a></h4>
+    <h4><a href="contact.html">Контакты</a></h4>
+  </div>
 
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHITECTORVISION</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+</head>
+<body>
+
+<header class="header" id="header">
+    <div id="parallelogram">
+      <img src="image/6139080-200.svg" alt="Логотип" class="logo-image">
+      <span class="a">ARCHITECTORVISION</span>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> 
+    <div class="action-container"> 
+      <div class="search-bar">
+        <input type="text" id="text-to-find" value="">
+        <button onclick="FindOnPage('text-to-find')">Поиск</button>
+    </div>
+    
+        <div class="user-actions">
+          <button id="favorite-button">
+              <img src="image/free-icon-call-center-agent-2706851(1).png" alt="Звонок">
+          </button>
+          <button id="scooter-button"><img src="image/free-icon-new-email-1060421.png" alt="почта"></button>
+          <button id="cart-button">
+            <img src="image/free-icon-russia-13442376.png" alt="язык">
+        </button>
+      </div>
+    </div>
+    <div class="submenu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="company.html">О компании</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="sobject.html">Наши объекты</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container-objects">
+    <h1 class="title">Наши объекты</h1>
+    <div class="icon-container">
+        <div class="icon" onclick="showCategory('residential')">
+            <i class="fas fa-home"></i>
+            <span>Жилые дома</span>
+        </div>
+        <div class="icon" onclick="showCategory('schools')">
+            <i class="fas fa-school"></i>
+            <span>Общеобразовательные учреждения</span>
+        </div>
+        <div class="icon" onclick="showCategory('kindergartens')">
+            <i class="fas fa-child"></i>
+            <span>Дошкольные учреждения</span>
+        </div>
+        <div class="icon" onclick="showCategory('healthcare')">
+            <i class="fas fa-hospital"></i>
+            <span>Объекты здравоохранения</span>
+        </div>
+        <div class="icon" onclick="showCategory('sports')">
+            <i class="fas fa-dumbbell"></i>
+            <span>Спортивно-оздоровительные сооружения</span>
+        </div>
+        <div class="icon" onclick="showCategory('olympic')">
+            <i class="fas fa-trophy"></i>
+            <span>Олимпийские объекты</span>
+        </div>
+        <div class="icon" onclick="showCategory('utility')">
+            <i class="fas fa-tools"></i>
+            <span>Объекты коммунального хозяйства</span>
+        </div>
+        <div class="icon" onclick="showCategory('industrial')">
+            <i class="fas fa-industry"></i>
+            <span>Промышленные предприятия</span>
+        </div>
+        <!-- Добавьте больше иконок по необходимости -->
+    </div>
+
+    <div id="category-container"></div>
+</div>
+
+<script>
+function showCategory(category) {
+    let categoryData = {
+        residential: [
+            { name: 'Жилой дом №1', address: 'ул. Ленина, 1', description: 'Современный жилой дом с удобствами.', image: 'image/house1.jpg' },
+            { name: 'Жилой дом №2', address: 'ул. Пушкина, 2', description: 'Многоэтажный жилой комплекс.', image: 'image/house2.jpg' }
+        ],
+        schools: [
+            { name: 'Школа №1', address: 'ул. Гагарина, 10', description: 'Средняя общеобразовательная школа.', image: 'image/school1.jpg' },
+            { name: 'Школа №2', address: 'ул. Кирова, 12', description: 'Школа с углубленным изучением английского языка.', image: 'image/school2.jpg' }
+        ],
+        kindergartens: [
+            { name: 'Детский сад №1', address: 'ул. Ломоносова, 5', description: 'Детский сад с бассейном.', image: 'image/kindergarten1.jpg' },
+            { name: 'Детский сад №2', address: 'ул. Чехова, 6', description: 'Детский сад с большой игровой площадкой.', image: 'image/kindergarten2.jpg' }
+        ],
+        healthcare: [
+            { name: 'Поликлиника №1', address: 'ул. Свердлова, 8', description: 'Современная поликлиника.', image: 'image/clinic1.jpg' },
+            { name: 'Больница №2', address: 'ул. Красная, 9', description: 'Больница с отделением интенсивной терапии.', image: 'image/hospital2.jpg' }
+        ],
+        sports: [
+            { name: 'Стадион №1', address: 'ул. Победы, 10', description: 'Футбольный стадион международного класса.', image: 'image/stadium1.jpg' },
+            { name: 'Спортзал №2', address: 'ул. Мира, 15', description: 'Современный спортивный зал.', image: 'image/sports2.jpg' }
+        ],
+        olympic: [
+            { name: 'Олимпийский объект №1', address: 'ул. Олимпийская, 1', description: 'Стадион для Олимпийских игр.', image: 'image/olympic1.jpg' },
+            { name: 'Олимпийский объект №2', address: 'ул. Спортивная, 2', description: 'Олимпийская деревня.', image: 'image/olympic2.jpg' }
+        ],
+        utility: [
+            { name: 'Котельная №1', address: 'ул. Теплая, 11', description: 'Современная котельная.', image: 'image/utility1.jpg' },
+            { name: 'Водонасосная станция №2', address: 'ул. Водная, 13', description: 'Автоматизированная водонасосная станция.', image: 'image/utility2.jpg' }
+        ],
+        industrial: [
+            { name: 'Завод №1', address: 'ул. Заводская, 20', description: 'Металлургический завод.', image: 'image/industrial1.jpg' },
+            { name: 'Фабрика №2', address: 'ул. Фабричная, 22', description: 'Текстильная фабрика.', image: 'image/industrial2.jpg' }
+        ]
+    };
+
+    let container = document.getElementById('category-container');
+    container.innerHTML = '';
+
+    if (categoryData[category]) {
+        let categoryTitle = document.createElement('h2');
+        categoryTitle.innerText = getCategoryName(category);
+        container.appendChild(categoryTitle);
+
+        categoryData[category].forEach(item => {
+            let itemContainer = document.createElement('div');
+            itemContainer.classList.add('object-item');
+
+            let itemImage = document.createElement('img');
+            itemImage.src = item.image;
+            itemImage.alt = item.name;
+
+            let itemDetails = document.createElement('div');
+            itemDetails.classList.add('object-details');
+
+            let itemName = document.createElement('h3');
+            itemName.innerText = item.name;
+
+            let itemAddress = document.createElement('p');
+            itemAddress.innerText = `Адрес: ${item.address}`;
+
+            let itemDescription = document.createElement('p');
+            itemDescription.innerText = item.description;
+
+            itemDetails.appendChild(itemName);
+            itemDetails.appendChild(itemAddress);
+            itemDetails.appendChild(itemDescription);
+
+            itemContainer.appendChild(itemImage);
+            itemContainer.appendChild(itemDetails);
+
+            container.appendChild(itemContainer);
+        });
+    }
+}
+
+function getCategoryName(category) {
+    switch (category) {
+        case 'residential': return 'Жилые дома';
+        case 'schools': return 'Общеобразовательные учреждения';
+        case 'kindergartens': return 'Дошкольные учреждения';
+        case 'healthcare': return 'Объекты здравоохранения';
+        case 'sports': return 'Спортивно-оздоровительные сооружения';
+        case 'olympic': return 'Олимпийские объекты';
+        case 'utility': return 'Объекты коммунального хозяйства';
+        case 'industrial': return 'Промышленные предприятия';
+        default: return 'Объекты';
+    }
+}
+</script>
+
+<style>
+    .h1{
+        align-items: centers;
+    }
+
+.container-objects {
+    padding: 60px 20px;
+    margin-top: 60px; /* To avoid overlap with fixed header */
+}
+
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.icon {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 40px); /* Adjust the width for four items per row */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon i {
+    font-size: 48px;
+    color: #FF8B00;
+}
+
+.icon span {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+#category-container {
+    margin-top: 30px;
+}
+
+.object-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: calc(25% - 20px); /* Adjust the width for four items per row */
+    margin: 10px;
+}
+
+.object-item img {
+    width: 150px;
+    height: auto;
+    border-right: 1px solid #ddd;
+}
+
+.object-details {
+    padding: 20px;
+    flex: 1;
+}
+
+.object-details h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.object-details p {
+    margin: 5px 0;
+    color: #666;
+}
+</style>
+
+
+
+  <footer class="footer">
+    <div class="footer-section">
+      <h4 class="yellow-text">НОВОСТНАЯ РАССЫЛКА</h4>
+      <p>Получайте последние новости, специальные предложения и купоны <br> по электронной почте! Вы можете отменить подписку в любое время.</p>
+      <form action="#" class="subscribe-form">
+        <input type="email" placeholder="Your email">
+        <button type="submit" class="subscribe-button">Subscribe</button>
+      </form>  
+      <h4 class="yellow-text">КОДЫ КУПОНОВ</h4>
+      <p>Подпишитесь <span class="highlights">на нашу новостную</span> рассылку.</p>
+    </div>
+    <div>
+      <hr class="divider">
+    </div>
+    <div class="footer-section">
+      <h4><a href="index.html">Главная</a></h4> <!-- либо ссылка на стороний источник -->
+      <h4><a href="company.html">О компании</a></h4>
+      <h4><a href="news.html">Новости</a></h4>
+      <h4><a href="so.html">Наши объекты</a></h4>
+      <h4><a href="contact.html">Контакты</a></h4>
+    </div>
+  
+  </footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

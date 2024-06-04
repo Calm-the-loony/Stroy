@@ -204,3 +204,16 @@ function makePhoneCall() {
 //     }
 // }
 
+function openModal() {
+  document.getElementById("applyModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("applyModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == document.getElementById("applyModal")) {
+      closeModal();
+  }
+}

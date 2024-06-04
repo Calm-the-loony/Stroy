@@ -10,30 +10,6 @@ body {
 }
 
 
-
-/* Лого */
-#parallelogram {
-  width: 150px;
-  height: 100%;
-  -webkit-transform: skew(-20deg);
-  -moz-transform: skew(-20deg);
-  -o-transform: skew(-20deg);
-  background-color: #b9ff21;
-  position: absolute;
-  top: 0;
-  left: 100px;
-  margin-right: auto;
-}
-
-.logo-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-}
-
 /* Серый контейнер */
 .action-container {
   background-color: #545454;
@@ -121,7 +97,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -241,7 +217,7 @@ body {
   margin-left: 560px;
   width: auto;
   padding: 17px;
-  top: 40px;
+  top: 35px;
   z-index: 1000; /* Поверх других элементов */
 }
 
@@ -261,7 +237,7 @@ body {
 .submenu ul li:not(:last-child)::after {
   content: '';
   position: absolute;
-  height: calc(100% + 22px);
+  height: calc(100% + 12px);
   width: 1px;
   background-color: #4b4a4a;
   top: -10px;
@@ -455,7 +431,7 @@ body {
 }
 
 .red-line {
-  width: 220px;
+  width: 320px;
   height: 2px;
   background-color: #FF8B00;
   margin: 0 auto 20px;
@@ -559,14 +535,15 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #b9ff21;
+  background-color: #ffffff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  box-shadow: 0 4px 8px #b9ff21;
 }
 
 .reason-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px #b9ff21;
 }
 
 .reason-item img {
@@ -720,7 +697,7 @@ body {
 }
 
 .activity-item {
-  background-color: #FF8B00;
+  background-color: #eaeaea;
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -728,7 +705,7 @@ body {
   width: 80%;
   max-width: 500px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #FF8B00;
 }
 
 .activity-item:hover {

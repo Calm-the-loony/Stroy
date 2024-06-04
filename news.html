@@ -48,65 +48,120 @@
 </header>
 
 <style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+  }
+
   .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px #FF8B00;
-    border-radius: 10px;
-    margin-top: 100px;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
   }
 
   h1 {
-    text-align: center;
-    color: #333;
+      text-align: center;
+      color: #333;
   }
 
-  .contact-info {
-    margin-bottom: 20px;
+  .news-item {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px #b9ff21;
   }
 
-  .contact-info p {
-    line-height: 1.6;
-    color: #666;
+  .news-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px #b9ff21;
   }
 
-  .contact-info p strong {
-    color: #333;
+  .news-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+      display: block;
   }
 
-  .map {
-    margin-top: 20px;
+  .news-item h2 {
+      margin: 15px 0 10px;
+      color: #333;
   }
 
-  .map iframe {
-    width: 100%;
-    height: 400px;
-    border: 0;
-    border-radius: 10px;
+  .news-item .date {
+      color: #999;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+  }
+
+  .news-item p {
+      color: #666;
+      line-height: 1.6;
+  }
+
+  .news-item a {
+      text-decoration: none;
+      color: #0066cc;
+      display: block;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 0 0 10px 10px;
+  }
+
+  .news-item a:hover {
+      text-decoration: underline;
   }
 </style>
-
+</head>
+<body>
 <div class="container">
-  <h1>Контакты</h1>
-  <div class="contact-info">
-    <p><strong>ООО "Ростовгипрошахт"</strong></p>
-    <p>344000, г. Ростов-на-Дону, пр. Театральный, 89</p>
-    <p>Тел.: (863) 207-50-50</p>
-    <p>E-mail: <a href="mailto:rgsh@rgsh.org">rgsh@rgsh.org</a></p>
-    <p>Веб-сайт: <a href="http://www.rostovgiproshaht.com" target="_blank">www.rostovgiproshaht.com</a></p>
-  </div>
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.4469206632746!2d39.70244281564122!3d47.22295797916044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b83b0f73759b%3A0x3ba6f5c1ff9b8394!2z0KHRgtGA0LDQstC70LDRhtC60L7QstGB0LrQuNC5INCz0L7RgdGC0YDQvtCy0LDQudGB0LrQuNC5INGD0YDQvtGC0YAg0LrQsNGA0YHQutC40Lkg0KHQvdC10LrRgdC60LjQuSDQvdCwINGC0LXRgdC60L7QstC40Y8g0LrQu9C40LrRgtC10L3RgtGMLg!5e0!3m2!1sru!2sru!4v1686080571040!5m2!1sru!2sru&markers=icon:https://maps.google.com/mapfiles/ms/icons/red-dot.png%7C47.22295797916044,39.70244281564122"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</div>
+  <h1>Новости</h1>
 
+  <div class="news-item">
+      <a href="news1.html">
+          <img src="image/gurin.jpg" alt="News Image 1">
+          <div class="news-content">
+              <h2>
+                В.П. Гурин принял участие в совместном заседании Высшего горного совета и Комитета ТПП по энергетической стратегии</h2>
+              <div class="date">24 мая 2024</div>
+              <p>
+                22 мая в Торгово-промышленной палате Российской Федерации состоялось совместное заседание Высшего горного совета (ВГС) НП «Горнопромышленники России» и Комитета ТПП РФ по энергетической стратегии и развитию ТЭК, посвященное повышению эффективности работы минерально-сырьевого комплекса России, в котором принял участие Генеральный директор ГК “Ростовгипрошахт”, руководитель Южного отделения АГН, корпоративный член ВАГН и вице-президент НП “Горнопромышленники России” Валерий Петрович Гурин.</p>
+          </div>
+      </a>
+  </div>
+
+  <div class="news-item">
+      <a href="news2.html">
+          <img src="image/news2.jpg" alt="News Image 2">
+          <div class="news-content">
+              <h2>Название новости 2</h2>
+              <div class="date">25 мая 2024</div>
+              <p>Описание новости 2. Здесь будет краткое содержание новости, которое даст пользователям представление о содержимом статьи.</p>
+          </div>
+      </a>
+  </div>
+
+  <div class="news-item">
+      <a href="news3.html">
+          <img src="image/news3.jpg" alt="News Image 3">
+          <div class="news-content">
+              <h2>Название новости 3</h2>
+              <div class="date">10 мая 2024</div>
+              <p>Описание новости 3. Здесь будет краткое содержание новости, которое даст пользователям представление о содержимом статьи.</p>
+          </div>
+      </a>
+  </div>
+
+  <!-- Добавьте больше новостей по необходимости -->
+</div>
 
   <footer class="footer">
     <div class="footer-section">

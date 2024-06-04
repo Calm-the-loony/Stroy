@@ -40,7 +40,7 @@
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">О компании</a></li>
-            <li><a href="news.html">Новости</a></li>
+            <li><a href="#">Новости</a></li>
             <li><a href="#">Наши объекты</a></li>
             <li><a href="contact.html">Контакты</a></li>
         </ul>
@@ -48,65 +48,74 @@
 </header>
 
 <style>
-  .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px #FF8B00;
-    border-radius: 10px;
-    margin-top: 100px;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
 
-  h1 {
-    text-align: center;
-    color: #333;
-  }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px #FF8B00;
+      border-radius: 10px;
 
-  .contact-info {
-    margin-bottom: 20px;
-  }
+    }
 
-  .contact-info p {
-    line-height: 1.6;
-    color: #666;
-  }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
 
-  .contact-info p strong {
-    color: #333;
-  }
+    .news-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-  .map {
-    margin-top: 20px;
-  }
+    .news-content .date {
+      color: #999;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
 
-  .map iframe {
-    width: 100%;
-    height: 400px;
-    border: 0;
-    border-radius: 10px;
-  }
-</style>
+    .news-content p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-<div class="container">
-  <h1>Контакты</h1>
-  <div class="contact-info">
-    <p><strong>ООО "Ростовгипрошахт"</strong></p>
-    <p>344000, г. Ростов-на-Дону, пр. Театральный, 89</p>
-    <p>Тел.: (863) 207-50-50</p>
-    <p>E-mail: <a href="mailto:rgsh@rgsh.org">rgsh@rgsh.org</a></p>
-    <p>Веб-сайт: <a href="http://www.rostovgiproshaht.com" target="_blank">www.rostovgiproshaht.com</a></p>
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="news-content">
+      <img src="image/gurin.jpg" alt="News Image 1">
+      <h1>В.П. Гурин принял участие в совместном заседании Высшего горного совета и Комитета ТПП по энергетической стратегии</h1>
+      <div class="date">24 мая 2024</div>
+      <p>22 мая в Торгово-промышленной палате Российской Федерации состоялось совместное заседание Высшего горного совета (ВГС) НП «Горнопромышленники России» и Комитета ТПП РФ по энергетической стратегии и развитию ТЭК, посвященное повышению эффективности работы минерально-сырьевого комплекса России, в котором принял участие Генеральный директор ГК “Ростовгипрошахт”, руководитель Южного отделения АГН, корпоративный член ВАГН и вице-президент НП “Горнопромышленники России” Валерий Петрович Гурин.</p>
+    <br>
+    <p>В рамках мероприятия состоялись специальные сессии, посвященные вопросам кадрового обеспечения инвестиционных проектов в горной отрасли и созданию благоприятных условий для инвесторов, работе с молодежью в рамках федеральных проектов, развитию профессиональных компетенций рабочих горных специальностей, замещению критически важных материалов и оборудования, стимулированию геологоразведочных работ, переработке промышленных отходов, повышению безопасности, снижению аварийности при добыче полезных ископаемых.</p>
+    <br>
+    <p>По итогам экспертных обсуждений в ходе совместного заседания Высшего горного совета НП «Горнопромышленники России» и Комитета ТПП РФ по энергетической стратегии и развитию ТЭК консолидированные рекомендации и предложения будут направлены в профильные министерства и ведомства.</p>
+    </div>
+    <a href="news.html" class="back-link">Вернуться к новостям</a>
   </div>
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.4469206632746!2d39.70244281564122!3d47.22295797916044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b83b0f73759b%3A0x3ba6f5c1ff9b8394!2z0KHRgtGA0LDQstC70LDRhtC60L7QstGB0LrQuNC5INCz0L7RgdGC0YDQvtCy0LDQudGB0LrQuNC5INGD0YDQvtGC0YAg0LrQsNGA0YHQutC40Lkg0KHQvdC10LrRgdC60LjQuSDQvdCwINGC0LXRgdC60L7QstC40Y8g0LrQu9C40LrRgtC10L3RgtGMLg!5e0!3m2!1sru!2sru!4v1686080571040!5m2!1sru!2sru&markers=icon:https://maps.google.com/mapfiles/ms/icons/red-dot.png%7C47.22295797916044,39.70244281564122"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</div>
-
 
   <footer class="footer">
     <div class="footer-section">

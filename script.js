@@ -38,10 +38,10 @@ function FindOnPage(inputId) { //ищет текст на странице, в �
 
 
   //меню
-  function toggleMenu() {
-    var submenu = document.querySelector('.submenu');
-    submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
-}
+//   function toggleMenu() {
+//     var submenu = document.querySelector('.submenu');
+//     submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+// }
 
 //избранное на карточке
 function toggleFavorite(button) {
@@ -163,44 +163,44 @@ function makePhoneCall() {
 
 
 //шапка сворачивается при отпределенном количестве прокрутки, позже доделать
-let prevScrollPos = window.pageYOffset;
-let isMenuOpen = false; // Флаг для отслеживания состояния меню
+// let prevScrollPos = window.pageYOffset;
+// let isMenuOpen = false; // Флаг для отслеживания состояния меню
 
-function scrollHandler(event) {
-    const currentScrollPos = window.pageYOffset;
-    const header = document.getElementById("header");
-    const actionContainer = document.querySelector(".action-container");
-    const submenu = document.querySelector('.submenu');
+// function scrollHandler(event) {
+//     const currentScrollPos = window.pageYOffset;
+//     const header = document.getElementById("header");
+//     const actionContainer = document.querySelector(".action-container");
+//     const submenu = document.querySelector('.submenu');
 
-    if (prevScrollPos > currentScrollPos || currentScrollPos < actionContainer.offsetTop + actionContainer.offsetHeight) {
-        header.style.height = "100px"; /* Показываем шапку при прокрутке вверх или если мы выше action-container */
-        actionContainer.style.marginLeft = "0"; // Вернуть обычный margin-left
-    } else {
-        header.style.height = "50px"; /* Скрываем верхнюю часть шапки при прокрутке вниз и нахождении ниже action-container */
-        submenu.style.display = 'none'; // Скрываем подменю при прокрутке вниз
-        actionContainer.style.marginLeft = "-7px"; 
-        isMenuOpen = false; // Сбрасываем флаг меню
-    }
+//     if (prevScrollPos > currentScrollPos || currentScrollPos < actionContainer.offsetTop + actionContainer.offsetHeight) {
+//         header.style.height = "100px"; /* Показываем шапку при прокрутке вверх или если мы выше action-container */
+//         actionContainer.style.marginLeft = "0"; // Вернуть обычный margin-left
+//     } else {
+//         header.style.height = "50px"; /* Скрываем верхнюю часть шапки при прокрутке вниз и нахождении ниже action-container */
+//         submenu.style.display = 'none'; // Скрываем подменю при прокрутке вниз
+//         actionContainer.style.marginLeft = "-7px"; 
+//         isMenuOpen = false; // Сбрасываем флаг меню
+//     }
     
-    prevScrollPos = currentScrollPos;
-}
+//     prevScrollPos = currentScrollPos;
+// }
 
-function toggleMenu() {
-    const header = document.querySelector('.header');
-    const submenu = document.querySelector('.submenu');
-    const logoText = document.querySelector('.logo-text');
+// function toggleMenu() {
+//     const header = document.querySelector('.header');
+//     const submenu = document.querySelector('.submenu');
+//     const logoText = document.querySelector('.logo-text');
 
-    // Если шапка свернута, развернуть её
-    if (!isMenuOpen) {
-        header.style.height = '100px'; // Вернуть обычную высоту
-        logoText.style.opacity = '1'; 
-        submenu.style.display = 'block'; // Показ подменю
-        isMenuOpen = true;
-    } else {
-        // Иначе, свернуть шапку и скрыть подменю
-        header.style.height = '50px';
-        submenu.style.display = 'none';
-        isMenuOpen = false;
-    }
-}
+//     // Если шапка свернута, развернуть её
+//     if (!isMenuOpen) {
+//         header.style.height = '100px'; // Вернуть обычную высоту
+//         logoText.style.opacity = '1'; 
+//         submenu.style.display = 'block'; // Показ подменю
+//         isMenuOpen = true;
+//     } else {
+//         // Иначе, свернуть шапку и скрыть подменю
+//         header.style.height = '50px';
+//         submenu.style.display = 'none';
+//         isMenuOpen = false;
+//     }
+// }
 

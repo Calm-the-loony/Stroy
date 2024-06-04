@@ -892,4 +892,70 @@ body {
   text-decoration: none; 
 }
 
-/* Стили для страницы товара */
+/* страница о компании */
+.container-yprav-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container-yprav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.card-yprav {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #FF8B00;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(220, 128, 0, 0.273);
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-yprav img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+}
+
+.card-yprav p {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.yprav-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.card-story {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  text-align: left; 
+  box-shadow: 0 4px 8px rgba(0, 72, 2, 0.533);
+  overflow: hidden;
+  margin: 10px auto; 
+  padding: 20px; 
+}
+.card-job {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  text-align: left; 
+  box-shadow: 0 4px 8px rgba(0, 72, 2, 0.533);
+  overflow: hidden;
+  margin: 10px auto; 
+  padding: 20px; 
+}

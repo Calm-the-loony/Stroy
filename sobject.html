@@ -92,36 +92,37 @@
 function showCategory(category) {
     let categoryData = {
         residential: [
-            { name: 'Жилой дом №1', address: 'ул. Ленина, 1', description: 'Современный жилой дом с удобствами.', image: 'image/house1.jpg' },
-            { name: 'Жилой дом №2', address: 'ул. Пушкина, 2', description: 'Многоэтажный жилой комплекс.', image: 'image/house2.jpg' }
+            { name: 'Жилой дом №1', address: 'ул. Ленина, 1', description: 'Современный жилой дом с удобствами.', image: 'image/dom.jpg' },
+            { name: 'Жилой дом №2', address: 'ул. Пушкина, 2', description: 'Многоэтажный жилой комплекс.', image: 'image/dom2.jpg' },
+            { name: 'Жилой дом №3', address: 'ул. Лермонтова, 452', description: 'Жилой дом.', image: 'image/dom3.jpg' },
         ],
         schools: [
-            { name: 'Школа №1', address: 'ул. Гагарина, 10', description: 'Средняя общеобразовательная школа.', image: 'image/school1.jpg' },
-            { name: 'Школа №2', address: 'ул. Кирова, 12', description: 'Школа с углубленным изучением английского языка.', image: 'image/school2.jpg' }
+            { name: 'Школа №1', address: 'ул. Гагарина, 10', description: 'Средняя общеобразовательная школа.', image: 'image/school.jpeg' },
+            { name: 'Школа №2', address: 'ул. Кирова, 12', description: 'Школа с углубленным изучением английского языка.', image: 'image/school2.jpeg' }
         ],
         kindergartens: [
-            { name: 'Детский сад №1', address: 'ул. Ломоносова, 5', description: 'Детский сад с бассейном.', image: 'image/kindergarten1.jpg' },
-            { name: 'Детский сад №2', address: 'ул. Чехова, 6', description: 'Детский сад с большой игровой площадкой.', image: 'image/kindergarten2.jpg' }
+            { name: 'Детский сад №1', address: 'ул. Ломоносова, 5', description: 'Детский сад с бассейном.', image: 'image/sad.jpeg' },
+            { name: 'Детский сад №2', address: 'ул. Чехова, 6', description: 'Детский сад с большой игровой площадкой.', image: 'image/sad2.jpg' }
         ],
         healthcare: [
-            { name: 'Поликлиника №1', address: 'ул. Свердлова, 8', description: 'Современная поликлиника.', image: 'image/clinic1.jpg' },
-            { name: 'Больница №2', address: 'ул. Красная, 9', description: 'Больница с отделением интенсивной терапии.', image: 'image/hospital2.jpg' }
+            { name: 'Поликлиника №1', address: 'ул. Свердлова, 8', description: 'Современная поликлиника.', image: 'image/304909-gorodskaya-poliklinika-_1_l.jpg' },
+            { name: 'Больница №2', address: 'ул. Красная, 9', description: 'Больница с отделением интенсивной терапии.', image: 'image/boln2.jpg' }
         ],
         sports: [
-            { name: 'Стадион №1', address: 'ул. Победы, 10', description: 'Футбольный стадион международного класса.', image: 'image/stadium1.jpg' },
-            { name: 'Спортзал №2', address: 'ул. Мира, 15', description: 'Современный спортивный зал.', image: 'image/sports2.jpg' }
+            { name: 'Стадион №1', address: 'ул. Победы, 10', description: 'Футбольный стадион международного класса.', image: 'image/stad.jpeg' },
+            { name: 'Спортзал №2', address: 'ул. Мира, 15', description: 'Современный спортивный зал.', image: 'image/stad2.jpg' }
         ],
         olympic: [
-            { name: 'Олимпийский объект №1', address: 'ул. Олимпийская, 1', description: 'Стадион для Олимпийских игр.', image: 'image/olympic1.jpg' },
-            { name: 'Олимпийский объект №2', address: 'ул. Спортивная, 2', description: 'Олимпийская деревня.', image: 'image/olympic2.jpg' }
+            { name: 'Олимпийский объект №1', address: 'ул. Олимпийская, 1', description: 'Стадион для Олимпийских игр.', image: 'image/olimp.jpg' },
+            { name: 'Олимпийский объект №2', address: 'ул. Спортивная, 2', description: 'Олимпийская деревня.', image: 'image/olimp2.jpeg' }
         ],
         utility: [
-            { name: 'Котельная №1', address: 'ул. Теплая, 11', description: 'Современная котельная.', image: 'image/utility1.jpg' },
-            { name: 'Водонасосная станция №2', address: 'ул. Водная, 13', description: 'Автоматизированная водонасосная станция.', image: 'image/utility2.jpg' }
+            { name: 'Котельная №1', address: 'ул. Теплая, 11', description: 'Современная котельная.', image: 'image/kotel.jpg' },
+            { name: 'Водонасосная станция №2', address: 'ул. Водная, 13', description: 'Автоматизированная водонасосная станция.', image: 'image/st.jpg' }
         ],
         industrial: [
             { name: 'Завод №1', address: 'ул. Заводская, 20', description: 'Металлургический завод.', image: 'image/industrial1.jpg' },
-            { name: 'Фабрика №2', address: 'ул. Фабричная, 22', description: 'Текстильная фабрика.', image: 'image/industrial2.jpg' }
+            { name: 'Фабрика №2', address: 'ул. Фабричная, 22', description: 'Текстильная фабрика.', image: 'image/industrial2.jpeg' }
         ]
     };
 
